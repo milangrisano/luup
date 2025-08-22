@@ -11,9 +11,11 @@ class DesktopScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     final pageProvider = Provider.of<PageProvider>(context, listen: false);
     return  Scaffold(
-      backgroundColor: Colors.redAccent,
+      backgroundColor: Colors.grey,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+        actionsPadding: const EdgeInsets.all(100),
         backgroundColor: Colors.transparent,
         automaticallyImplyLeading: false,
         title: const Text('Name Page'),
