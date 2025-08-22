@@ -1,2 +1,0 @@
-# luup
-luup  PWA project 

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_app/provider/page_provider.dart';
 import 'package:responsive_app/shared/extend_appbar_button.dart';
+import 'package:responsive_app/shared/leading_logo.dart';
 import 'package:responsive_app/ui/home_body.dart';
 
 class DesktopScaffold extends StatelessWidget {
@@ -11,14 +12,26 @@ class DesktopScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     final pageProvider = Provider.of<PageProvider>(context, listen: false);
     return  Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.black,
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
-        actionsPadding: const EdgeInsets.all(100),
-        backgroundColor: Colors.transparent,
+        toolbarHeight: 80,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(40),
+            color: const Color.fromRGBO(35, 68, 101, 1),
+          ),
+          margin: const EdgeInsets.all(10),          
+          height: 60,
+        ),
+        //shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+        //actionsPadding: const EdgeInsets.all(5),
+        backgroundColor: const Color.fromRGBO(233, 226, 207, 1),
         automaticallyImplyLeading: false,
-        title: const Text('Name Page'),
+        title: const Padding(
+          padding: EdgeInsets.only(left: 20.0),
+          child: LeadingLogo(),
+        ),
         actions:  [
           ExtendAppBarButton(
             text: 'Home',
@@ -48,4 +61,6 @@ class DesktopScaffold extends StatelessWidget {
     );
   }
 }
+
+
 
