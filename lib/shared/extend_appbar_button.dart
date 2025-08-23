@@ -1,30 +1,34 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ExtendAppBarButton extends StatelessWidget {
   final String text;
   final Function onPressed;
+  final Color backgroundcolor;
     
   const ExtendAppBarButton({
     super.key,
     required this.text,
     required this.onPressed,
+    this.backgroundcolor=Colors.transparent,
   });
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40),
+      padding: const EdgeInsets.symmetric(horizontal: 5),
       child: TextButton(
         onPressed: () => onPressed(),
-        style: TextButton.styleFrom(
-          foregroundColor: Colors.white,
-          textStyle: const TextStyle(
-            fontSize: 22,
-            fontWeight: FontWeight.bold,
-          )
-          // disabledForegroundColor: Colors.red.withOpacity(0.38),
+        style:  ButtonStyle(
+          backgroundColor: WidgetStatePropertyAll(backgroundcolor),
         ),
-        child: Text(text)
+        child: Text(
+          text,
+          style: GoogleFonts.montserrat(
+            color: Colors.white,
+            fontSize: 14,
+          ),
+        )
       ),
     );
   }

@@ -18,7 +18,7 @@ class DesktopScaffold extends StatelessWidget {
         toolbarHeight: 80,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(40),
+            borderRadius: BorderRadius.circular(60),
             color: const Color.fromRGBO(35, 68, 101, 1),
           ),
           margin: const EdgeInsets.all(10),          
@@ -34,26 +34,60 @@ class DesktopScaffold extends StatelessWidget {
         ),
         actions:  [
           ExtendAppBarButton(
-            text: 'Home',
+            text: '¿Que Hacemos?',
             onPressed: () => pageProvider.goTo(0),
           ),
           ExtendAppBarButton(
-            text: 'About',
+            text: '¿Como lo Hacemos?',
             onPressed: () => pageProvider.goTo(1),
           ),
           ExtendAppBarButton(
-            text: 'Pricing',
+            text: '¿Quienes Somos?',
             onPressed: () => pageProvider.goTo(2),
           ),
           ExtendAppBarButton(
-            text: 'Contact',
+            text: 'Blog',
             onPressed: () => pageProvider.goTo(3),
           ),
           ExtendAppBarButton(
-            text: 'Location',
+            text: 'Contacto',
             onPressed: () => pageProvider.goTo(4),
           ),
-          const SizedBox(width: 20),          
+          Row(
+            children: [
+              Container(
+                width: 25,
+                height: 25,
+                decoration: const BoxDecoration(
+                  color: Color.fromRGBO(116, 147, 178, 1),
+                  shape: BoxShape.circle, // Define la forma como círculo
+                ),
+              ),
+              Container(
+                width: 25,
+                height: 25,
+                decoration: const BoxDecoration(
+                  color: Color.fromRGBO(221, 116, 25, 1),
+                  shape: BoxShape.circle, // Define la forma como círculo
+                ),
+              ),
+              Container(
+                width: 25,
+                height: 25,
+                decoration: const BoxDecoration(
+                  color: Color.fromRGBO(233, 226, 207, 1),
+                  shape: BoxShape.circle, // Define la forma como círculo
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(width: 15),
+          ExtendAppBarButton(
+            text: 'LUUPERS',
+            onPressed: () => pageProvider.goTo(4),
+            backgroundcolor: const Color.fromRGBO(221, 116, 25, 1),
+          ),
+          const SizedBox(width: 20),
         ],
         // elevation: 10,
       ),
