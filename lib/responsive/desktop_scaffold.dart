@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:responsive_app/provider/page_provider.dart';
 import 'package:responsive_app/shared/extend_appbar_button.dart';
 import 'package:responsive_app/shared/leading_logo.dart';
+import 'package:responsive_app/shared/three_point_decoration.dart';
 import 'package:responsive_app/ui/home_body.dart';
 
 class DesktopScaffold extends StatelessWidget {
@@ -53,38 +54,11 @@ class DesktopScaffold extends StatelessWidget {
             text: 'Contacto',
             onPressed: () => pageProvider.goTo(4),
           ),
-          Row(
-            children: [
-              Container(
-                width: 25,
-                height: 25,
-                decoration: const BoxDecoration(
-                  color: Color.fromRGBO(116, 147, 178, 1),
-                  shape: BoxShape.circle, // Define la forma como círculo
-                ),
-              ),
-              Container(
-                width: 25,
-                height: 25,
-                decoration: const BoxDecoration(
-                  color: Color.fromRGBO(221, 116, 25, 1),
-                  shape: BoxShape.circle, // Define la forma como círculo
-                ),
-              ),
-              Container(
-                width: 25,
-                height: 25,
-                decoration: const BoxDecoration(
-                  color: Color.fromRGBO(233, 226, 207, 1),
-                  shape: BoxShape.circle, // Define la forma como círculo
-                ),
-              ),
-            ],
-          ),
+          const ThreePointDecoration(),
           const SizedBox(width: 15),
           ExtendAppBarButton(
             text: 'LUUPERS',
-            onPressed: () => pageProvider.goTo(4),
+            onPressed: () => (),
             backgroundcolor: const Color.fromRGBO(221, 116, 25, 1),
           ),
           const SizedBox(width: 20),
@@ -95,6 +69,7 @@ class DesktopScaffold extends StatelessWidget {
     );
   }
 }
+
 
 
 

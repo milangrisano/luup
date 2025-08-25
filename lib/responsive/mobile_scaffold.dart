@@ -13,15 +13,27 @@ class MobileScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     final pageProvider = Provider.of<PageProvider>(context, listen: false);
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      backgroundColor: Colors.lightBlueAccent,
+      extendBodyBehindAppBar: true,      
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        toolbarHeight: 80,
+        flexibleSpace: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(60),
+            color: const Color.fromRGBO(35, 68, 101, 1),
+          ),
+          margin: const EdgeInsets.only(top: 10,bottom: 10,left: 2,right: 2),          
+          height: 60,
+        ),
+        backgroundColor: const Color.fromRGBO(233, 226, 207, 1),
         automaticallyImplyLeading: false,
         title: const LeadingLogo(),
         centerTitle: false,
+        iconTheme:  const IconThemeData(
+          color: Colors.white,
+        ),
       ),
       endDrawer: Drawer(
+        backgroundColor: const Color.fromRGBO(233, 226, 207, 1),
         child: Column(
           children: [
             const CustomDrawerHeader(),
