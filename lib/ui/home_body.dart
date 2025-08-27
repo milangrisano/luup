@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_app/provider/page_provider.dart';
-import 'package:responsive_app/ui/view/about_view.dart';
-import 'package:responsive_app/ui/view/contact_view.dart';
-import 'package:responsive_app/ui/view/home_view.dart';
-import 'package:responsive_app/ui/view/location_view.dart';
-import 'package:responsive_app/ui/view/pricing_view.dart';
+import 'package:responsive_app/ui/view/How_We_Do_It.dart';
+import 'package:responsive_app/ui/view/blog.dart';
+import 'package:responsive_app/ui/view/what_we_do.dart';
+import 'package:responsive_app/ui/view/location.dart';
+import 'package:responsive_app/ui/view/who_we_are.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({super.key});

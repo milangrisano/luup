@@ -5,6 +5,6 @@ class LeadingLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset('assets/images/logo-removebg-20.png');
+    return Image.asset('assets/logo/logo-removebg-20.png');
   }
 }
